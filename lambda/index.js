@@ -84,7 +84,7 @@ const PlayAudioIntentHandler = {
         try {
             apiResponse = await getLatestUrl();
             obj = await apiResponse.json();
-            streamUrl = obj.streamUrl.replace(/^.*(?=\/flow\/)/, `https://${MA_HOSTNAME}`);
+            streamUrl = obj.streamUrl.replace(/^https?:\/\/[^\/]+/, `https://${MA_HOSTNAME}`);
             metadata = {
               title: obj.title,
               subtitle: obj.title,
@@ -268,7 +268,7 @@ const PlaybackControllerHandler = {
     try {
         apiResponse = await getLatestUrl();
         obj = await apiResponse.json();
-        streamUrl = obj.streamUrl.replace(/^.*(?=\/flow\/)/, `https://${MA_HOSTNAME}`);
+        streamUrl = obj.streamUrl.replace(/^https?:\/\/[^\/]+/, `https://${MA_HOSTNAME}`);
         metadata = {
           title: obj.title,
           subtitle: obj.title,
