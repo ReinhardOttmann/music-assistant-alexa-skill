@@ -1,7 +1,6 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "audio player sample",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -16,13 +15,13 @@
           "samples": []
         },
         {
-          "name": "PlayAudioIntent",
           "slots": [],
+          "name": "PlayAudioIntent",
           "samples": [
-            "start my audio",
-            "play my audio",
-            "start audio",
-            "play audio"
+            "music assistant start my audio",
+            "music assistant play my audio",
+            "music assistant start audio",
+            "music assistant play audio"
           ]
         },
         {
@@ -42,8 +41,8 @@
           "samples": []
         }
       ],
-      "types": []
+      "types": [],
+      "invocationName": "music assistant"
     }
-  },
-  "version": "3"
+  }
 }

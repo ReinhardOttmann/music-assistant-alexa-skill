@@ -1,5 +1,30 @@
 {
   "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Music Assistant"
+        },
+        "en-US": {
+          "summary": "Play Music Assistant URL",
+          "examplePhrases": [
+            "Alexa, play Music Assistant URL"
+          ],
+          "keywords": [],
+          "name": "Music Assistant",
+          "description": "Sample skill using the AudioPlayer interface",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "{\"ask_dist_username\":\"\",\"ask_dist_password\":\"\",\"ask_dist_testing_instructions\":\"Sample Testing Instructions.\"}",
+      "category": "MUSIC_AND_AUDIO_ACCESSORIES",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": [
+        "DE"
+      ]
+    },
     "apis": {
       "custom": {
         "endpoint": {
@@ -9,26 +34,37 @@
           {
             "type": "AUDIO_PLAYER"
           }
-        ]
+        ],
+        "locales": {},
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": ""
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": ""
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": ""
+            }
+          }
+        }
       }
     },
     "manifestVersion": "1.0",
-    "publishingInformation": {
-      "category": "MUSIC_AND_AUDIO_ACCESSORIES",
-      "distributionCountries": [],
-      "isAvailableWorldwide": true,
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
       "locales": {
-        "en-US": {
-          "description": "Sample skill using the AudioPlayer interface",
-          "examplePhrases": [
-            "Alexa open audio player sample"
-          ],
-          "keywords": [],
-          "name": "Audioplayer sample",
-          "summary": "Sample Short Description"
-        }
+        "en-US": {}
       },
-      "testingInstructions": "Sample Testing Instructions."
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
     }
   }
 }

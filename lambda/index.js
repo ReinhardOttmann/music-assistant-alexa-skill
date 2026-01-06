@@ -25,6 +25,7 @@ function getLatestUrl() {
             const auth = Buffer.from(`${API_USERNAME}:${API_PASSWORD}`).toString('base64');
             headers['Authorization'] = `Basic ${auth}`;
         }
+        headers['Accept'] ='JSON';
 
         const options = {
             hostname: API_HOSTNAME,
@@ -119,7 +120,8 @@ const PlayAudioIntentHandler = {
          * If you cannot play your own audio in place of the sample URL, make sure your audio file adheres to the guidelines:
          * https://developer.amazon.com/docs/alexa/custom-skills/audioplayer-interface-reference.html#audio-stream-requirements
         */
-
+        
+        
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .addAudioPlayerPlayDirective(
@@ -350,7 +352,9 @@ const FallbackIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.FallbackIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Sorry, I don\'t know about that. Please try again.';
+        const speakOutput = 'Sorry, I don\'t know about that. Please try again. Please try again.';
+
+        console.log('handlerInput:  + ${JSON.stringify(handlerInput.requestEnvelope)}');
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -459,6 +463,7 @@ const SavePersistentAttributesResponseInterceptor = {
     await handlerInput.attributesManager.savePersistentAttributes();
   },
 };
+
 
 /**
  * This handler acts as the entry point for your skill, routing all request and response

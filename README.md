@@ -1,7 +1,3 @@
-<h2 style="color: white; margin: 0;">🚨 PROJECT HAS MOVED 🚨</h2>
-<h3 style="color: white; margin: 10px 0;">⚠️ THIS REPOSITORY IS NO LONGER ACTIVELY DEVELOPED ⚠️</h3>
-<h3 style="color: white; margin: 10px 0;">⚠️ PLEASE MIGRATE TO THE <a href="https://github.com/alams154/music-assistant-alexa-skill-prototype">PROTOTYPE SKILL</a> ⚠️</h3>
-
 # Music Assistant Alexa Skill
 
 This project is an Alexa skill that integrates with [Music Assistant](https://music-assistant.io/) to provide audio playback using the AudioPlayer interface. The skill fetches the latest stream URL from your Music Assistant instance and plays it on Alexa-enabled devices.
